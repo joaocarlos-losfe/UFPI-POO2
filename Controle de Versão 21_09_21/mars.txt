@@ -2,3 +2,8 @@ primeira informação adicionada ao arquivo
 segunda informação adicionada
 
 repositorio no git-hub criado
+
+
+alteração feita por contribuidor -
+	user: viktorsht
+	email: <viktorshantus@gmail.com>
