@@ -5,9 +5,6 @@ from Telas.tela_exibir import UiExibir
 from Telas.tela_cadastro import UiCadastro
 from Telas.dialogs import Dialogs
 
-import sys
-import os
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFileDialog, QMessageBox
 from PyQt5.QtCore import QCoreApplication
