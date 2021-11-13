@@ -69,19 +69,20 @@ class Main(QMainWindow, MainScreen):
             self.cadastros.add_pessoa(pessoa)
             self.limpar_textos()
             print("cadastrado...")
+            Dialogs.alert_mensage("Cadastrado com sucesso ✅", "cadastro ok")
         else:
             Dialogs.alert_mensage("Alguns campos estão vazios", "erro ao cadastrar")
 
     def buscar(self):
         cpf = self.tela_exibir.le_cpf.text()
-        p = self.cadastros.get_pessoa(cpf)
+        pessoa = self.cadastros.get_pessoa(cpf)
 
-        if p is None:
+        if pessoa is None:
             Dialogs.alert_mensage("Pessoa não encontrada", "erro ao procurar")
         else:
-            self.tela_exibir.lbl_nome.setText(p.get_nome)
-            self.tela_exibir.lbl_nascimento.setText(p.get_nascimento)
-            self.tela_exibir.lbl_endececo.setText(p.get_endereco)
+            self.tela_exibir.lbl_nome.setText(pessoa.get_nome)
+            self.tela_exibir.lbl_nascimento.setText(pessoa.get_nascimento)
+            self.tela_exibir.lbl_endececo.setText(pessoa.get_endereco)
 
     def abrir_tela_cadastro(self):
         self.QtStack.setCurrentIndex(1)
